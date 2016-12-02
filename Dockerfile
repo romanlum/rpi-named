@@ -17,4 +17,6 @@ RUN mkdir -m 0755 -p /var/cache/bind && touch /var/cache/bind/docker-init && cho
 VOLUME ["/etc/bind"]
 
 COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
